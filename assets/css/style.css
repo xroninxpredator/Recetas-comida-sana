@@ -1,0 +1,359 @@
+.cabezera{
+    display: flex;
+    align-items:  center ;
+    background-color: #f9f9f9;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.lista{
+    display: flex;
+}
+
+.lista{
+    list-style: none;
+}
+
+.lista .lista-link{
+    color: #808080;
+    margin-right:1.5rem ;
+    text-decoration: none;
+    text-transform: lowercase ;
+}
+
+.lista .lista-link:hover{
+    text-decoration: underline;
+}
+
+.lista .lista-link:active{
+    color: #333333;
+    font-weight: bolder;
+}
+
+.banner .imagen-banner{ 
+    width: 100%;
+    height: calc(100vh - 72px);
+}
+
+.titulo-banner{
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    color: #fdfdfd;
+    font-family: Pacifico, cursive ;
+    font-size: 5.0625rem ;
+    text-shadow: 0 4px  4px rgba(0, 0, 0, 0.75);
+}
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s;
+    --transform: translateY(-100vh);
+    --transition: transform 0.8s ;
+}
+
+.popup-show{
+opacity: 1;
+pointer-events: unset;
+transition: opacity 0.6s;
+--transform: translateY(0);
+--transition: transform 0.8s 0.2s;
+}
+
+.popup-container{
+    margin: auto ;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #ffffff;
+    border-radius: 32px;
+    border: 6px solid #8d0606;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition: var(--transition);
+}
+
+.popup-imagen{
+    width: 90%;
+    max-width: 300px;
+    transition: 1.8s;
+    border: 5px solid #8d0606;
+}
+
+.popup-imagen-show{
+    border: 5px solid #8d0606;
+    border-radius: 100%;
+    
+}
+
+.titulo-receta{
+    font-family: Pacifico, cursive ;
+    font-size: 3.1875rem;
+    color: #8d0606;
+}
+
+.parrafo-receta{
+    color: #595959;
+    font-size: 1.75rem;
+    font-weight: 100; 
+    margin-bottom: 10px;
+}
+
+.btn-cerrar-receta{
+    text-decoration: none;
+    color: #8d0606;
+    background-color: #ffffff;
+    padding: 1em 3em;
+    border: 1px solid #8d0606; ;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.btn-cerrar-receta:hover{
+    color: #ffffff;
+    background-color: #400101;
+}
+
+.sobre{
+    height: auto;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 2.5rem;
+}
+
+.titulo-sobre{
+    font-family: Pacifico, cursive ;
+    font-size: 3.1875rem;
+    color: #8d0606;
+}
+
+.parrafo-sobre{
+    color: #595959;
+    font-size: 1.75rem;
+    font-weight: 100; 
+}
+
+.recetas{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #e5e5e5;
+    padding: 5rem 0 0 5rem;
+}
+
+.receta{
+    display: flex;
+    flex-direction: column;
+    background-color: #fdfdfd;
+    margin:0 5rem 5rem 0;
+    width: calc(25% - 5rem);
+    box-shadow: 5px 6px 23px -5px rgba(0,0,0,1);
+    -webkit-box-shadow: 5px 6px 23px -5px rgba(0,0,0,1);
+    -moz-box-shadow: 5px 6px 23px -5px rgba(0,0,0,1);
+}
+
+.receta-imagen{
+    height: 200px;
+
+}
+
+.receta-titulo{
+    font-size: 1.4375rem;
+}
+
+.receta-descripcion{
+    font-size: 1.1875rem;
+    line-height: 1.5;
+    text-align: justify;
+    transition: 1s;
+}
+
+.receta-contenido{ 
+    padding: 1rem;
+}
+
+.receta-boton{
+    background-color: #8d0606;
+    color: #fdfdfd;
+    width: 10rem;
+    height: 3rem;
+    border: none;
+    border-radius:5px ;
+    padding: 1rem;
+    transition: 0.3s;
+}
+
+.receta-boton:hover{
+    background-color: #400101;  
+    color: #fdfdfd;
+}
+
+.quienes-somos{
+    padding: 5rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    
+}
+
+.quienes-somos__titulo{
+    margin-bottom: 1rem;
+    font-family: Pacifico, cursive ;
+    font-size: 3.1875rem;
+    color: #8d0606;
+}
+
+.quienes-somos__descripcion{
+    color: #595959;
+    font-size: 1.75rem;
+    font-weight: 100
+}
+
+.personas{
+    display: flex;
+    padding-top:3rem;
+    justify-content: space-around;
+}
+
+.persona{
+    display: flex;
+    flex-direction: column;
+}
+
+.persona-nombre{
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-family:Pacifico, cursive;
+    color: #8d0606;
+}
+
+.persona-nombre:hover{
+    text-decoration: underline;
+}
+
+.persona-funcion{
+    text-transform: lowercase;
+    color: #595959;
+    font-size: 1.25rem;
+    font-weight: 100
+}
+
+.persona-imagen{
+    width: 300px;
+    height: 300px;
+    border-radius: 500px;
+    box-shadow: 5px 6px 23px -5px rgba(0,0,0,1);
+    -webkit-box-shadow: 5px 6px 23px -5px rgba(0,0,0,1);
+    -moz-box-shadow: 5px 6px 23px -5px rgba(0,0,0,1);
+}
+
+.contacto{
+    border-top: 6px solid #400101;
+    text-align: center;
+}
+
+.titulo-contacto{
+    margin-bottom: 1rem;
+    font-family: Pacifico, cursive ;
+    font-size: 3.1875rem;
+    color: #8d0606;
+    padding-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.lista-contacto{
+    display: flex;
+    align-items:  center ;
+    justify-content: space-evenly;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    list-style: none;
+}
+
+
+.copy{
+    display: flex;
+    justify-content: center;
+    padding: 0.3rem 0 0.3rem 0;
+    color: #e5e5e5;
+    background-color: #595959;
+    height: 2rem;
+}
+
+@media screen and (max-width: 768px  ) {
+    .cabezera{
+        justify-content: center;
+        padding: 0 1rem;
+    }
+    
+    .logo{
+        display: none;
+    }
+
+
+    .imagen-banner{
+        height: calc(100vh - 51px);
+    }
+
+    .titulo-banner{
+        font-size: 3rem;
+    }
+    .popup{
+        display: flex;
+    }
+
+    .sobre{
+        padding: 2.5rem 1rem;
+    }
+
+    .titulo-sobre{
+        font-size: 2.5rem;
+    }
+
+    .parrafo-sobre{
+        font-size: 1.15rem;
+    }
+
+    .receta{
+        margin-right: 10rem;
+        width: 70%;
+    }
+ 
+    .recetas{
+        padding: 5rem 0 0 5rem;
+    }
+
+    .persona{
+        margin-bottom: 0 ;
+    }
+
+    .personas {
+        flex-direction: column;
+        
+    }
+
+    .persona-nombre {
+        text-align: center;
+        font-size: 1.50rem;
+    }
+
+    .persona-funcion{
+        text-align: center;
+        font-size: 0.75rem;
+    }
+}
